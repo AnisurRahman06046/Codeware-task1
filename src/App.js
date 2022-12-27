@@ -13,11 +13,11 @@ function App() {
         const result = data.data
           .split(",")
           .map((x, i) => {
-            if (x.trim() == "age=30") {
+            if (x.trim() === "age=30") {
               return [i - 1];
             }
           })
-          .filter((x) => x != undefined)
+          .filter((x) => x !== undefined)
           .map((x) => {
             return mydata[x].split("=")[1];
           });
